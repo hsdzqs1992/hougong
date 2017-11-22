@@ -22,7 +22,7 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:padding="8dip"
-        android:src="@drawable/search"/>
+        android:src="@drawable/seach"/>
 
     <ImageView
         android:id="@+id/message"
@@ -33,13 +33,13 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:padding="8dip"
-        android:src="@drawable/message"/>
+        android:src="@drawable/screen"/>
 
     <com.zhuye.hougong.weidgt.PagerSlidingTabStrip
         android:id="@+id/tab_strip"
         android:gravity="center"
+        android:layout_marginLeft="25dp"
         android:layout_gravity="center"
-        android:layout_marginLeft="80dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
@@ -49,6 +49,7 @@
         android:fillViewport="false"
         app:pstsIndicatorHeight="3dp"
         app:pstsScrollOffset="150dp"
+
         app:pstsTabPaddingLeftRight="10dp"
         />
     </RelativeLayout>

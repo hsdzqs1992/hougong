@@ -1,8 +1,11 @@
 package com.zhuye.hougong.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
@@ -13,6 +16,7 @@ import com.zhuye.hougong.adapter.HomePagerAdapter;
 import com.zhuye.hougong.base.BaseFragment;
 import com.zhuye.hougong.bean.HomeBanner;
 import com.zhuye.hougong.contants.Contants;
+import com.zhuye.hougong.view.SearchActivity;
 import com.zhuye.hougong.weidgt.PagerSlidingTabStrip;
 
 /**
@@ -29,6 +33,7 @@ public class HomeFragment extends BaseFragment {
     private ViewPager mviewpager;
     private PagerSlidingTabStrip mTabStrip;
     HomePagerAdapter homePagerAdapter;
+    ImageView search;
     @Override
     protected void initView() {
 
@@ -37,11 +42,12 @@ public class HomeFragment extends BaseFragment {
         //Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(),"iconfont.ttf");
         mviewpager = rootView.findViewById(R.id.home_viewpager);
         mTabStrip=rootView.findViewById(R.id.tab_strip);
+        search=rootView.findViewById(R.id.search);
         mTabStrip.setTextColorResource(R.color.white);
         mTabStrip.setIndicatorColorResource(R.color.white);
         mTabStrip.setDividerColor(Color.TRANSPARENT);
         mTabStrip.setTextSelectedColorResource(R.color.white);
-        mTabStrip.setTextSize(getResources().getDimensionPixelSize(R.dimen.h6));
+        mTabStrip.setTextSize(getResources().getDimensionPixelSize(R.dimen.h8));
         mTabStrip.setTextSelectedSize(getResources().getDimensionPixelSize(R.dimen.h10));
         mTabStrip.setUnderlineHeight(1);
         //myToolbar = rootView.findViewById(R.id.home_toolbar);
@@ -51,11 +57,6 @@ public class HomeFragment extends BaseFragment {
        mviewpager.setAdapter(homePagerAdapter);
 //        myToolbar.tabs.setViewPager(mviewpager);
         mTabStrip.setViewPager(mviewpager);
-
-
-
-
-
     }
 
     private void initToolBar() {
@@ -75,9 +76,6 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void initData() {
         super.initData();
-
-
-
         OkGo.<String>post(Contants.lunbo)
                 .tag(getActivity())
                 .execute(new StringCallback() {
@@ -99,5 +97,16 @@ public class HomeFragment extends BaseFragment {
                     }
                 });
 
+    }
+
+    @Override
+    protected void initListener() {
+        super.initListener();
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), SearchActivity.class));
+            }
+        });
     }
 }

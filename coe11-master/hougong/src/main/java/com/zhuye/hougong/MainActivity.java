@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -56,11 +57,12 @@ public class MainActivity extends AppCompatActivity {
         tabfragment.add( MeFragment.class);
 
 
-        tabimage.add(R.string.video);
-        tabimage.add(R.string.paihang);
-        tabimage.add(R.string.find);
-        tabimage.add(R.string.message);
-        tabimage.add(R.string.me);
+        tabimage.add(R.drawable.home_mettingpalce);
+        tabimage.add(R.drawable.home_mrankinglist);
+        tabimage.add(R.drawable.home_find);
+        tabimage.add(R.drawable.home_message);
+        tabimage.add(R.drawable.home_me);
+
 
         //初始化view
         initView();
@@ -81,11 +83,12 @@ public class MainActivity extends AppCompatActivity {
         Typeface typeface = Typeface.createFromAsset(getAssets(),"iconfont.ttf");
         for(int i = 0; i<5;i++){
             View v= View.inflate(this,R.layout.tabview,null);
-            TextView tabiv = v.findViewById(R.id.tab_view);
+            ImageView tabiv = v.findViewById(R.id.tab_view);
+            tabiv.setBackgroundResource(tabimage.get(i));
             //tabiv.setImageResource(R.mipmap.ic_launcher);
-            tabiv.setText(tabimage.get(i));
+            //tabiv.setText(tabimage.get(i));
             //tabiv.setTextSize();
-            tabiv.setTypeface(typeface);
+           // tabiv.setTypeface(typeface);
             TextView tv = v.findViewById(R.id.tab_tv);
             tv.setText(tabnames.get(i));
 

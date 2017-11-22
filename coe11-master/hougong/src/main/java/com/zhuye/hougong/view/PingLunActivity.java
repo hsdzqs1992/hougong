@@ -1,5 +1,6 @@
 package com.zhuye.hougong.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -47,7 +48,7 @@ public class PingLunActivity extends AppCompatActivity {
 
     @OnClick(R.id.pinglun)
     public void onViewClicked() {
-
+        startActivity(new Intent(PingLunActivity.this,FaBuActivity.class));
 
     }
 }

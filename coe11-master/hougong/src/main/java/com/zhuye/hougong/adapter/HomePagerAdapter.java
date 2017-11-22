@@ -61,19 +61,6 @@ public class HomePagerAdapter extends FragmentStatePagerAdapter {
         return titles.size();
     }
 
-//    @Override
-//    public Object instantiateItem(ViewGroup container, int position) {
-//        container.addView(fargments.get(position).rootView);
-//        //container.
-//        return fargments.get(position);
-//    }
-//
-//    @Override
-//    public void destroyItem(ViewGroup container, int position, Object object) {
-//        super.destroyItem(container, position, object);
-//        container.removeView(((BaseFragment) object).rootView);
-//    }
-
     @Override
     public CharSequence getPageTitle(int position) {
         return titles.get(position);
