@@ -82,6 +82,7 @@ public class TuiJianFragment extends BaseFragment {
         recyclerView.setAdapter(homeTuiJianAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
 
+        //recyclerView.add
 
         homeTuiJianAdapter.setOnItemClickListener(new BaseHolder.OnItemClickListener() {
             @Override

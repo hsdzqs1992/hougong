@@ -1,8 +1,9 @@
 package com.zhuye.hougong.fragment;
 
-import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,12 +12,12 @@ import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+import com.mikepenz.materialdrawer.Drawer;
 import com.zhuye.hougong.R;
 import com.zhuye.hougong.adapter.HomePagerAdapter;
 import com.zhuye.hougong.base.BaseFragment;
 import com.zhuye.hougong.bean.HomeBanner;
 import com.zhuye.hougong.contants.Contants;
-import com.zhuye.hougong.view.SearchActivity;
 import com.zhuye.hougong.weidgt.PagerSlidingTabStrip;
 
 /**
@@ -34,8 +35,18 @@ public class HomeFragment extends BaseFragment {
     private PagerSlidingTabStrip mTabStrip;
     HomePagerAdapter homePagerAdapter;
     ImageView search;
+    Drawer drawer;
+    DrawerLayout mDrawerLayout;
+
     @Override
     protected void initView() {
+
+       //drawer = new DrawerBuilder().withActivity(getActivity()).build();
+
+        //drawer.setFullscreen(false);
+
+
+
 
 
 
@@ -43,6 +54,8 @@ public class HomeFragment extends BaseFragment {
         mviewpager = rootView.findViewById(R.id.home_viewpager);
         mTabStrip=rootView.findViewById(R.id.tab_strip);
         search=rootView.findViewById(R.id.search);
+        mDrawerLayout=rootView.findViewById(R.id.home_drawer);
+
         mTabStrip.setTextColorResource(R.color.white);
         mTabStrip.setIndicatorColorResource(R.color.white);
         mTabStrip.setDividerColor(Color.TRANSPARENT);
@@ -105,7 +118,9 @@ public class HomeFragment extends BaseFragment {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), SearchActivity.class));
+               // startActivity(new Intent(getActivity(), SearchActivity.class));
+                //drawer.openDrawer();
+                mDrawerLayout.openDrawer(GravityCompat.END);
             }
         });
     }
