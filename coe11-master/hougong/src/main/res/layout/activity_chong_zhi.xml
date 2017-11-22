@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chong_zhi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhuye.hougong.view.ChongZhiActivity">
+
+    <com.zhuye.hougong.weidgt.MyToolBar2
+        android:id="@+id/chongzhi_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.zhuye.hougong.weidgt.MyToolBar2>
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chongzhi_touxiang"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toRightOf="@+id/chongzhi_touxiang"
+                android:text="用户名"
+                android:id="@+id/chongzhi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/chongzhi_name"
+                android:layout_toRightOf="@+id/chongzhi_touxiang"
+                android:text="22"
+                android:id="@+id/find_zuixin_dizhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/chongzhi_name"
+                android:textSize="25sp"
+                android:layout_alignParentRight="true"
+                android:text="152"
+                android:id="@+id/chongzhi_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!---->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="5元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="10元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="20元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:id="@+id/imageView" />
+
+                <TextView
+                    android:text="50元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="100元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="200元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="500元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="1000元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="10000元"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:textSize="18sp"
+            android:text="请选择支付方式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/chongzhi_alipay"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:textSize="18sp"
+            android:text="支付宝"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/chongzhi_weixin"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:textSize="18sp"
+            android:text="微信"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

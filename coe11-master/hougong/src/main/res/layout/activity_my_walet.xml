@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_walet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhuye.hougong.view.MyWaletActivity">
+
+
+    <com.zhuye.hougong.weidgt.MyToolBar2
+        android:id="@+id/mywalot_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.zhuye.hougong.weidgt.MyToolBar2>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="@string/zongzichan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40" />
+
+        <TextView
+            android:id="@+id/mywalot_money"
+            android:text="@string/monery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="累计收入（金币）"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+
+                <TextView
+                    android:id="@+id/mywalot_leiji"
+                    android:text="@string/monery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="累计支出（金币）"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:id="@+id/mywalot_zhichu"
+                    android:text="@string/monery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mywalot_chongzhi"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="充值"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mywalot_tixian"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="提现"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mywalot_jiaoyi"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="交易记录"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mywalot_shouzhijilv"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40" />
+                <TextView
+                    android:text="收支记录"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
